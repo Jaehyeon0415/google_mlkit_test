@@ -1,0 +1,155 @@
+PODS:
+  - body_detection (0.0.1):
+    - Flutter
+    - GoogleMLKit/PoseDetection (= 2.3.0)
+    - GoogleMLKit/PoseDetectionAccurate (= 2.3.0)
+    - GoogleMLKit/SegmentationSelfie (= 2.3.0)
+  - camera (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - GoogleDataTransport (9.1.2):
+    - GoogleUtilities/Environment (~> 7.2)
+    - nanopb (~> 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMLKit/MLKitCore (2.3.0):
+    - MLKitCommon (~> 3.1.0)
+  - GoogleMLKit/PoseDetection (2.3.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitPoseDetection (~> 1.0.0-beta5)
+  - GoogleMLKit/PoseDetectionAccurate (2.3.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitPoseDetectionAccurate (~> 1.0.0-beta5)
+  - GoogleMLKit/SegmentationSelfie (2.3.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitSegmentationSelfie (~> 1.0.0-beta3)
+  - GoogleToolboxForMac/DebugUtils (2.3.2):
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - GoogleToolboxForMac/Defines (2.3.2)
+  - GoogleToolboxForMac/Logger (2.3.2):
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - "GoogleToolboxForMac/NSData+zlib (2.3.2)":
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.3.2)":
+    - GoogleToolboxForMac/DebugUtils (= 2.3.2)
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.2)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.3.2)"
+  - GoogleUtilities/Environment (7.7.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.7.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/UserDefaults (7.7.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilitiesComponents (1.1.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.7.0)
+  - MLImage (1.0.0-beta1)
+  - MLKitCommon (3.1.0):
+    - GoogleDataTransport (~> 9.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleUtilities/UserDefaults (~> 7.0)
+    - GoogleUtilitiesComponents (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.12)
+  - MLKitPoseDetection (1.0.0-beta5):
+    - MLKitCommon (~> 3.1)
+    - MLKitPoseDetectionCommon (= 1.0.0-beta5)
+    - MLKitXenoCommon (= 1.0.0-beta5)
+  - MLKitPoseDetectionAccurate (1.0.0-beta5):
+    - MLKitCommon (~> 3.1)
+    - MLKitPoseDetectionCommon (= 1.0.0-beta5)
+    - MLKitXenoCommon (= 1.0.0-beta5)
+  - MLKitPoseDetectionCommon (1.0.0-beta5):
+    - MLKitCommon (~> 3.1)
+    - MLKitXenoCommon (= 1.0.0-beta5)
+  - MLKitSegmentationCommon (1.0.0-beta3):
+    - MLKitCommon (~> 3.1)
+    - MLKitXenoCommon (= 1.0.0-beta5)
+  - MLKitSegmentationSelfie (1.0.0-beta3):
+    - MLKitSegmentationCommon (= 1.0.0-beta3)
+  - MLKitVision (1.3.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+    - MLImage (= 1.0.0-beta1)
+    - MLKitCommon (~> 3.0)
+    - Protobuf (~> 3.12)
+  - MLKitXenoCommon (1.0.0-beta5):
+    - MLKitCommon (~> 3.1)
+    - MLKitVision (~> 1.3)
+  - nanopb (2.30908.0):
+    - nanopb/decode (= 2.30908.0)
+    - nanopb/encode (= 2.30908.0)
+  - nanopb/decode (2.30908.0)
+  - nanopb/encode (2.30908.0)
+  - permission_handler_apple (9.0.2):
+    - Flutter
+  - PromisesObjC (2.0.0)
+  - Protobuf (3.19.4)
+
+DEPENDENCIES:
+  - body_detection (from `.symlinks/plugins/body_detection/ios`)
+  - camera (from `.symlinks/plugins/camera/ios`)
+  - Flutter (from `Flutter`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+
+SPEC REPOS:
+  trunk:
+    - GoogleDataTransport
+    - GoogleMLKit
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GoogleUtilitiesComponents
+    - GTMSessionFetcher
+    - MLImage
+    - MLKitCommon
+    - MLKitPoseDetection
+    - MLKitPoseDetectionAccurate
+    - MLKitPoseDetectionCommon
+    - MLKitSegmentationCommon
+    - MLKitSegmentationSelfie
+    - MLKitVision
+    - MLKitXenoCommon
+    - nanopb
+    - PromisesObjC
+    - Protobuf
+
+EXTERNAL SOURCES:
+  body_detection:
+    :path: ".symlinks/plugins/body_detection/ios"
+  camera:
+    :path: ".symlinks/plugins/camera/ios"
+  Flutter:
+    :path: Flutter
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+
+SPEC CHECKSUMS:
+  body_detection: ec8d077166ec7c1b092d133553ff964eaff7a45e
+  camera: 9993f92f2c793e87b65e35f3a23c70582afb05b1
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
+  GoogleMLKit: 53d5adbee0fe5a701e970f1387d2cfececd5bc50
+  GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
+  GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
+  GoogleUtilitiesComponents: 679b2c881db3b615a2777504623df6122dd20afe
+  GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
+  MLImage: 647f3d580c10b3c9a3f6154f5d7baead60c42a0c
+  MLKitCommon: 1b5c79d52f79d9cc93ab5300e9713c4c215121ea
+  MLKitPoseDetection: d678a95ca0af6658f3539bf64b499e336fa99249
+  MLKitPoseDetectionAccurate: ea4d937dcc4ad5862c1c7157dcfd2141d0545412
+  MLKitPoseDetectionCommon: f3465bba3561e2f12cf4e80ce04e8eb0784ab30b
+  MLKitSegmentationCommon: 28c095b2c026e76087b6ea8dcd0a6a79fc4457c2
+  MLKitSegmentationSelfie: 83537a445fcc3def829852a5b6724f42f328751d
+  MLKitVision: 26da299aef93291f24f5200e8372919f73abf3b5
+  MLKitXenoCommon: 34fc24339d4ad1a3b0b0973fae18987f60802984
+  nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  permission_handler_apple: d21b38e1a4b2e041c63af9568f9165e114e507a6
+  PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
+
+PODFILE CHECKSUM: 4ca1747462519fce0e2d86c72c97f782d00d5496
+
+COCOAPODS: 1.11.2
