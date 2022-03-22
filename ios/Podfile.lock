@@ -4,8 +4,6 @@ PODS:
     - GoogleMLKit/PoseDetection (= 2.3.0)
     - GoogleMLKit/PoseDetectionAccurate (= 2.3.0)
     - GoogleMLKit/SegmentationSelfie (= 2.3.0)
-  - camera (0.0.1):
-    - Flutter
   - Flutter (1.0.0)
   - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
@@ -91,7 +89,6 @@ PODS:
 
 DEPENDENCIES:
   - body_detection (from `.symlinks/plugins/body_detection/ios`)
-  - camera (from `.symlinks/plugins/camera/ios`)
   - Flutter (from `Flutter`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
 
@@ -119,8 +116,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   body_detection:
     :path: ".symlinks/plugins/body_detection/ios"
-  camera:
-    :path: ".symlinks/plugins/camera/ios"
   Flutter:
     :path: Flutter
   permission_handler_apple:
@@ -128,7 +123,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   body_detection: ec8d077166ec7c1b092d133553ff964eaff7a45e
-  camera: 9993f92f2c793e87b65e35f3a23c70582afb05b1
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMLKit: 53d5adbee0fe5a701e970f1387d2cfececd5bc50

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_test/body_detector/body_detector_page.dart';
 import 'package:google_mlkit_test/home_page.dart';
-import 'package:google_mlkit_test/pose_detector/pose_detector_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +20,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        // '/pose-detection': (context) => const PoseDetectorPage(),
         '/body-detection': (context) => const BodyDetectorPage(),
       },
     );
