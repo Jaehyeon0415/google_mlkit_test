@@ -14,7 +14,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Home Page'),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 4,
+        title: const Text('Home'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

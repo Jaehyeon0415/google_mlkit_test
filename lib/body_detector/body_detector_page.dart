@@ -48,27 +48,25 @@ class _BodyDetectorPageState extends State<BodyDetectorPage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 0,
         title: const Text('Body Detector'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _isLoading
-                ? const CircularProgressIndicator()
-                : ClipRect(
-                    child: CustomPaint(
-                      child: _cameraImage,
-                      foregroundPainter: PoseMaskPainter(
-                        pose: _detectedPose,
-                        mask: _maskImage,
-                        imageSize: _imageSize,
-                      ),
-                    ),
+      body: _isLoading
+          ? const CircularProgressIndicator()
+          : Center(
+              child: ClipRect(
+                child: CustomPaint(
+                  child: _cameraImage,
+                  foregroundPainter: PoseMaskPainter(
+                    pose: _detectedPose,
+                    mask: _maskImage,
+                    imageSize: _imageSize,
                   ),
-          ],
-        ),
-      ),
+                ),
+              ),
+            ),
     );
   }
 
