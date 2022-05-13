@@ -16,8 +16,8 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
-        elevation: 4,
-        title: const Text('Home'),
+        elevation: 1,
+        title: const Text('3D 아바타 데모'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -45,22 +45,38 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
-          // TextButton(
-          //   child: Container(
-          //     alignment: Alignment.center,
-          //     padding: const EdgeInsets.all(12.0),
-          //     color: Colors.grey.shade400,
-          //     child: const Text('Body Detector'),
-          //   ),
-          //   onPressed: () async {
-          //     if (await Permission.camera.isGranted) {
-          //       Navigator.of(context).pushNamed('/body-detection');
-          //     } else if (await Permission.camera.request() ==
-          //         PermissionStatus.granted) {
-          //       Navigator.of(context).pushNamed('/body-detection');
-          //     }
-          //   },
-          // ),
+          Card(
+            elevation: 5,
+            color: Colors.blue.shade400,
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+            child: ListTile(
+              onTap: () => Navigator.of(context).pushNamed('/open-gl'),
+              title: const Text(
+                '3D 아바타',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Card(
+            elevation: 5,
+            color: Colors.blue.shade400,
+            margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+            child: ListTile(
+              onTap: () => Navigator.of(context).pushNamed('/open-gl-test'),
+              title: const Text(
+                '3D 아바타 테스트',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

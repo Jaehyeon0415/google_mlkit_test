@@ -4,7 +4,9 @@ import 'package:body_detection/body_detection.dart';
 import 'package:body_detection/models/body_mask.dart';
 import 'package:body_detection/models/image_result.dart';
 import 'package:body_detection/models/pose.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gl/flutter_gl.dart';
 import 'dart:ui' as ui;
 
 import 'package:google_mlkit_test/body_detector/pose_mask_painter.dart';
@@ -19,15 +21,12 @@ class BodyDetectorPage extends StatefulWidget {
 class _BodyDetectorPageState extends State<BodyDetectorPage> {
   bool _isLoading = true;
 
+  // Body Detection
   bool _isDetectingPose = true;
   bool _isDetectingBodyMask = true;
-
   Image? _selectedImage;
-
   Pose? _detectedPose;
-
   ui.Image? _maskImage;
-
   Image? _cameraImage;
   Size _imageSize = Size.zero;
 
@@ -58,18 +57,19 @@ class _BodyDetectorPageState extends State<BodyDetectorPage> {
           : Center(
               child: ClipRect(
                 child: CustomPaint(
-                  child: _cameraImage,
                   foregroundPainter: PoseMaskPainter(
                     pose: _detectedPose,
                     mask: _maskImage,
                     imageSize: _imageSize,
                   ),
+                  child: _cameraImage,
                 ),
               ),
             ),
     );
   }
 
+  // Body Detection Functions
   Future<void> _startCameraStream() async {
     await BodyDetection.startCameraStream(
       onFrameAvailable: _handleCameraImage,
@@ -95,8 +95,8 @@ class _BodyDetectorPageState extends State<BodyDetectorPage> {
   void _handleCameraImage(ImageResult result) {
     if (!mounted) return;
 
-    PaintingBinding.instance?.imageCache?.clear();
-    PaintingBinding.instance?.imageCache?.clearLiveImages();
+    PaintingBinding.instance.imageCache.clear();
+    PaintingBinding.instance.imageCache.clearLiveImages();
 
     final image = Image.memory(
       result.bytes,

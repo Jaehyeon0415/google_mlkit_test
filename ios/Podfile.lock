@@ -5,6 +5,9 @@ PODS:
     - GoogleMLKit/PoseDetectionAccurate (= 2.3.0)
     - GoogleMLKit/SegmentationSelfie (= 2.3.0)
   - Flutter (1.0.0)
+  - flutter_gl (0.0.3):
+    - Flutter
+    - three3d_egl (~> 0.1.3)
   - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
@@ -82,14 +85,16 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
-  - permission_handler_apple (9.0.2):
+  - permission_handler_apple (9.0.4):
     - Flutter
   - PromisesObjC (2.0.0)
   - Protobuf (3.19.4)
+  - three3d_egl (0.1.3)
 
 DEPENDENCIES:
   - body_detection (from `.symlinks/plugins/body_detection/ios`)
   - Flutter (from `Flutter`)
+  - flutter_gl (from `.symlinks/plugins/flutter_gl/ios`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
 
 SPEC REPOS:
@@ -112,18 +117,22 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - three3d_egl
 
 EXTERNAL SOURCES:
   body_detection:
     :path: ".symlinks/plugins/body_detection/ios"
   Flutter:
     :path: Flutter
+  flutter_gl:
+    :path: ".symlinks/plugins/flutter_gl/ios"
   permission_handler_apple:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
 
 SPEC CHECKSUMS:
   body_detection: ec8d077166ec7c1b092d133553ff964eaff7a45e
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_gl: 5a5603f35db897697f064027864a32b15d0c421d
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMLKit: 53d5adbee0fe5a701e970f1387d2cfececd5bc50
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
@@ -140,9 +149,10 @@ SPEC CHECKSUMS:
   MLKitVision: 26da299aef93291f24f5200e8372919f73abf3b5
   MLKitXenoCommon: 34fc24339d4ad1a3b0b0973fae18987f60802984
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
-  permission_handler_apple: d21b38e1a4b2e041c63af9568f9165e114e507a6
+  permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
+  three3d_egl: de2cd4950ad2d5f2122166c36583bde4c812e7b5
 
 PODFILE CHECKSUM: 4ca1747462519fce0e2d86c72c97f782d00d5496
 

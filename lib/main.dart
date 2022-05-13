@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_mlkit_test/body_detector/body_detector_page.dart';
 import 'package:google_mlkit_test/home_page.dart';
+import 'package:google_mlkit_test/open_gl/open_gl_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/body-detection': (context) => const BodyDetectorPage(),
+        '/open-gl': (context) => const OpenGlPage(),
       },
     );
   }
