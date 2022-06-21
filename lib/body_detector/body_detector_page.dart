@@ -6,7 +6,9 @@ import 'package:body_detection/models/image_result.dart';
 import 'package:body_detection/models/pose.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_gl/flutter_gl.dart';
+import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'dart:ui' as ui;
 
 import 'package:google_mlkit_test/body_detector/pose_mask_painter.dart';
@@ -19,6 +21,7 @@ class BodyDetectorPage extends StatefulWidget {
 }
 
 class _BodyDetectorPageState extends State<BodyDetectorPage> {
+  UnityWidgetController? controller;
   bool _isLoading = true;
 
   // Body Detection
@@ -32,29 +35,48 @@ class _BodyDetectorPageState extends State<BodyDetectorPage> {
 
   @override
   void initState() {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+    ]);
     _startCameraStream();
     super.initState();
   }
 
   @override
   void dispose() {
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     _stopCameraStream();
+    controller?.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        elevation: 0,
-        title: const Text('Body Detector'),
-      ),
-      body: _isLoading
-          ? const CircularProgressIndicator()
-          : Center(
+      backgroundColor: Colors.black,
+      body: Row(
+        children: [
+          if (_isLoading) ...[
+            const CircularProgressIndicator(),
+          ] else ...[
+            Expanded(
+              flex: 2,
+              child: UnityWidget(
+                onUnityCreated: (c) {
+                  debugPrint('# onUnityCreated!!');
+                  c.resume();
+                  controller = c;
+                  controller!.postMessage(
+                    'Cube',
+                    'SetRotationSpeed',
+                    0.3,
+                  );
+                },
+              ),
+            ),
+            Expanded(
               child: ClipRect(
                 child: CustomPaint(
                   foregroundPainter: PoseMaskPainter(
@@ -66,6 +88,9 @@ class _BodyDetectorPageState extends State<BodyDetectorPage> {
                 ),
               ),
             ),
+          ],
+        ],
+      ),
     );
   }
 

@@ -8,6 +8,8 @@ PODS:
   - flutter_gl (0.0.3):
     - Flutter
     - three3d_egl (~> 0.1.3)
+  - flutter_unity_widget (4.0.0):
+    - Flutter
   - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
@@ -90,12 +92,16 @@ PODS:
   - PromisesObjC (2.0.0)
   - Protobuf (3.19.4)
   - three3d_egl (0.1.3)
+  - webview_flutter_wkwebview (0.0.1):
+    - Flutter
 
 DEPENDENCIES:
   - body_detection (from `.symlinks/plugins/body_detection/ios`)
   - Flutter (from `Flutter`)
   - flutter_gl (from `.symlinks/plugins/flutter_gl/ios`)
+  - flutter_unity_widget (from `.symlinks/plugins/flutter_unity_widget/ios`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - webview_flutter_wkwebview (from `.symlinks/plugins/webview_flutter_wkwebview/ios`)
 
 SPEC REPOS:
   trunk:
@@ -126,13 +132,18 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_gl:
     :path: ".symlinks/plugins/flutter_gl/ios"
+  flutter_unity_widget:
+    :path: ".symlinks/plugins/flutter_unity_widget/ios"
   permission_handler_apple:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
+  webview_flutter_wkwebview:
+    :path: ".symlinks/plugins/webview_flutter_wkwebview/ios"
 
 SPEC CHECKSUMS:
   body_detection: ec8d077166ec7c1b092d133553ff964eaff7a45e
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
   flutter_gl: 5a5603f35db897697f064027864a32b15d0c421d
+  flutter_unity_widget: e509f3109933aa0c63b1bc149ca3d5b90fb68543
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMLKit: 53d5adbee0fe5a701e970f1387d2cfececd5bc50
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
@@ -153,6 +164,7 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Protobuf: 235750e4696ff59fb07d949a9dbbc92b3c0700fe
   three3d_egl: de2cd4950ad2d5f2122166c36583bde4c812e7b5
+  webview_flutter_wkwebview: b7e70ef1ddded7e69c796c7390ee74180182971f
 
 PODFILE CHECKSUM: 4ca1747462519fce0e2d86c72c97f782d00d5496
 

@@ -4,6 +4,7 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   flutter_gl_windows
+  flutter_unity_widget
   permission_handler_windows
 )
 

@@ -66,9 +66,9 @@ class _HomePageState extends State<HomePage> {
             color: Colors.blue.shade400,
             margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
             child: ListTile(
-              onTap: () => Navigator.of(context).pushNamed('/open-gl-test'),
+              onTap: () => Navigator.of(context).pushNamed('/unity'),
               title: const Text(
-                '3D 아바타 테스트',
+                'Unity Demo',
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -77,6 +77,22 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          // Card(
+          //   elevation: 5,
+          //   color: Colors.blue.shade400,
+          //   margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+          //   child: ListTile(
+          //     onTap: () => Navigator.of(context).pushNamed('/open-gl-test'),
+          //     title: const Text(
+          //       '3D 아바타 테스트',
+          //       style: TextStyle(
+          //         fontSize: 24,
+          //         fontWeight: FontWeight.bold,
+          //         color: Colors.white,
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
